@@ -5,6 +5,7 @@ describe('rzd_auth', function() {
     context('auth', function () {
         beforeEach(function () {
             cy.visit('http://rzhd.2.korusdev.ru')
+            cy.get('form_auth').invoke('attr', 'target', null);
         });
 
         it('failed_auth', function () {

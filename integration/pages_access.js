@@ -16,7 +16,7 @@ it('calendar_list', function () {
 
     it('calendar_event_card', function () {
         cy.visit('meeting');
-        cy.get('.description__p cl-red').trigger('mouseover');
+        cy.get('.description').trigger('mouseover');
         cy.get('.detail-info_modal').should('be.visible');
     })
 

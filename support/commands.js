@@ -23,3 +23,19 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('login_cs', function() {
+    cy.visit('meeting');
+    cy.get('.form_auth').invoke('attr', 'target', null);
+    cy.get('input[name=USER_LOGIN]').type('_grigorevna');
+    cy.get('input[name=USER_PASSWORD]').type('rzd123');
+    cy.get('.login_btn').click();
+});
+
+Cypress.Commands.add('login_part', function() {
+    cy.visit('meeting');
+    cy.get('.form_auth').invoke('attr', 'target', null);
+    cy.get('input[name=USER_LOGIN]').type('ktorovich_5d42f8b0aecee0_484797');
+    cy.get('input[name=USER_PASSWORD]').type('rzd123');
+    cy.get('.login_btn').click();
+});

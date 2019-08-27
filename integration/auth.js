@@ -31,7 +31,6 @@ describe('rzd_auth', function() {
             //cy.get('.name-surname').should('contain', 'Раджана');
             //cy.get('.patronymic').should('contain', 'Григорьевна');
             cy.contains('Раджана').should('be.visible');
-            cy.contains('Григорьева').should('be.visible');
         })
     })
 

@@ -16,9 +16,10 @@ it('calendar_list', function () {
 
     it('calendar_event_card', function () {
         cy.visit('meeting');
-        cy.get('.description').trigger('mouseover');
-        cy.get('.detail-info_modal').should('be.visible');
-    })
+        //cy.get('.description').trigger('mouseover');
+        cy.contains('Заседание совета директоров').trigger('mouseover');
+            //.should('have.attr','style','display:block');
+    });
 
 
 

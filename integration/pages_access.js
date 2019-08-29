@@ -9,6 +9,12 @@ it('calendar_calendar', function () {
     cy.get('h2').should('contain', 'Календарь')
 });
 
+it('plan', function () {
+
+    cy.contains('План').click();
+    cy.get('h2').should('contain','План')
+});
+
 it('calendar_list', function () {
     cy.visit('meeting/list');
     cy.get('h2').should('contain', 'Список мероприятий')

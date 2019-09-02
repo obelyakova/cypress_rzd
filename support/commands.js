@@ -24,7 +24,18 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('login_cs', function() {
+
+Cypress.Commands.add('login_cs', function () {
+
+//    return cy.request({
+//        method:'POST',
+//        url:'meeting',
+        //form:true,
+//        body:{
+//            username_cs,
+//            password_cs,
+//        }
+//    })
     cy.visit('meeting');
     cy.get('.form_auth').invoke('attr', 'target', null);
     cy.get('input[name=USER_LOGIN]').type('_grigorevna');

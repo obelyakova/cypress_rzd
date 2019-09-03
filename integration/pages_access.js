@@ -47,8 +47,13 @@ describe('pages_access', function () {
         cy.visit('meeting');
         cy.contains('Заседание совета директоров').trigger('mouseover')
             .parent().find('.detail-info_modal').should('have.attr','style','display: block;')
-            .find('.description__p').first().click({force:true});
-        cy.get('h2').should('contain','Заседание совета директоров');
+            .find('.description__p').first().should('have.attr','href')
+            .and('include','meeting')
+            //.click({force:true})
+            .then(href => {
+                cy.visit(href)
+            });
+        cy.get('h2').should('contain','Заседание совета директоров')
     });
 
 });

@@ -36,7 +36,7 @@ Cypress.Commands.add('login_cs', function () {
 //            password_cs,
 //        }
 //    })
-    cy.visit('meeting');
+    cy.visit('');
     cy.get('.form_auth').invoke('attr', 'target', null);
     cy.get('input[name=USER_LOGIN]').type('_grigorevna');
     cy.get('input[name=USER_PASSWORD]').type('rzd123');
@@ -44,7 +44,7 @@ Cypress.Commands.add('login_cs', function () {
 });
 
 Cypress.Commands.add('login_part', function() {
-    cy.visit('meeting');
+    cy.visit('');
     cy.get('.form_auth').invoke('attr', 'target', null);
     cy.get('input[name=USER_LOGIN]').type('ktorovich_5d42f8b0aecee0_484797');
     cy.get('input[name=USER_PASSWORD]').type('rzd123');

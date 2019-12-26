@@ -30,7 +30,7 @@ describe('rzd_auth', function() {
             cy.get('[type=submit]').click();
             //cy.get('.name-surname').should('contain', 'Раджана');
             //cy.get('.patronymic').should('contain', 'Григорьевна');
-            cy.contains('Раджана').should('be.visible');
+            cy.contains('Абдуллаева').should('be.visible');
         })
     })
 

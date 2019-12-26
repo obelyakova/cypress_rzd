@@ -14,7 +14,7 @@ describe('vote_cs', function () {
             return false
         });
 
-        cy.contains('Голосование не начато').parent('.status-task')
+        cy.contains('Голосование не открыто').parent('.status-task')
             .parent('.task-row ').children('.desc-task').find('a')
             .should('have.attr','href').and('include','/meeting/')
             .then(href => {
